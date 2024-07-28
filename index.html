@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <div class="buttons">
+            <button onclick="showSignIn()">Sign In</button>
+            <button onclick="showSignUp()">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="form-container" id="sign-in-form">
+        <h2>Sign In</h2>
+        <form>
+            <label for="signin-email">Email:</label>
+            <input type="email" id="signin-email" required>
+            <label for="signin-password">Password:</label>
+            <input type="password" id="signin-password" required>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <div class="form-container" id="sign-up-form">
+        <h2>Sign Up</h2>
+        <form>
+            <label for="signup-name">Name:</label>
+            <input type="text" id="signup-name" required>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" required>
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function showSignIn() {
+            document.getElementById('sign-in-form').style.display = 'block';
+            document.getElementById('sign-up-form').style.display = 'none';
+        }
+
+        function showSignUp() {
+            document.getElementById('sign-in-form').style.display = 'none';
+            document.getElementById('sign-up-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
